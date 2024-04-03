@@ -22,9 +22,9 @@ func main() {
 		return
 	}
 
-	coffee(coffeeOption)
+	orderCoffee(coffeeOption)
 
-	fmt.Println("You can pay with $0.25, $0.50 and $1.00")
+	fmt.Println("You can pay with $0.25, $0.50 or $1.00")
 	fmt.Printf("Please enter your payment amount: ")
 
 	_, err = fmt.Scanf("%f", &value)
@@ -41,7 +41,7 @@ func main() {
 	payment(value, coffeeOption)
 }
 
-func coffee(coffeeOption int16) {
+func orderCoffee(coffeeOption int16) {
 	switch coffeeOption {
 	case 1:
 		fmt.Println("You ordered an espresso, it's $1.")
